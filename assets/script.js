@@ -13,7 +13,7 @@ var hourRows = function () {
     var currentHour = dayjs().format('H');
 //Created an array for each time in a workday
     for(var i = 0; i < hours.length; i++) {
-        var rows = $('<div class="row"></div>');
+        var rows = $('<div class="timeRows"></div>');
         var times = $('<div class="hour">${hours[i]}</div>');
         var text = $('<textarea data-time="${i + 9}"></textarea>');
 //Built a loop to add them to html
@@ -31,7 +31,7 @@ var hourRows = function () {
         rows.append(times);
         rows.append(text);
         rows.append(litSaveBtn);
-        $('timeRows').append(rows);
+        $('.timeRows').append(rows);
     }
 }
 //Hopefully appended rows to html so that they are built correctly...
@@ -57,7 +57,21 @@ var loadData = function () {
                 $(textArea).what(saveText);
             }
         }
-    }
 
-//Built function to load user data
+        displayAlert = $('<div class="alert alert-success">Here is how the day is looking...</div>')
+    } else {
+        displayAlert = $('<div class="alert alert-info">Type tasks in the boxes and click save.</div>')
+    }
+$('header').append(displayAlert);
+
+var loadPage = function () {
+    today();
+    time();
+    setInterval(time, 1000);
+    hourRows();
+    loadData();
+    $(".saveBtn").click(saveData);
 }
+}
+$(document).ready("load", loadData());
+
