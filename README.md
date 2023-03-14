@@ -15,3 +15,18 @@ It is color coded to show the past as grey, present as green and future as red.
 
 ##Link
 
+https://sleonny.github.io/WorkDayPlanner/
+
+##Technologies Used
+
+Github
+
+VS Code Editor
+
+Google Search
+
+ChatGPT
+
+##License
+
+MIT License
