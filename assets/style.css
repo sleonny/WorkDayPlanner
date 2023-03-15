@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans', sans-serif;
     font-size: 16px;
   }
   
@@ -10,6 +10,7 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    
   }
   
   .description {
@@ -17,12 +18,17 @@ body {
   }
   
   .time-block {
+    display: flex;
+    justify-content: center;
     border-radius: 15px;
   }
   
   .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     border-top: 1px solid white;
-  }
+      }
   
   .hour {
     background-color: #ffffff;

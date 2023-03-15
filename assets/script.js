@@ -1,6 +1,8 @@
+
+
 var today = function () {
     var date = dayjs().format('dddd MMMM DD, YYYY')
-        $("div.timeRows").text(today);
+        $("div.timeRows").text(date);
 }
 //To Display the date
 var time = function () {
@@ -13,8 +15,8 @@ var hourRows = function () {
     var currentHour = dayjs().format('H');
 //Created an array for each time in a workday
     for(var i = 0; i < hours.length; i++) {
-        var rows = $('<div class="timeRows"></div>');
-        var times = $('<div class="hour">${hours[i]}</div>');
+        var rows = $('<div class="row"></div>');
+        var times = $("<div class='hour'>" +  hours[i] + "</div>");
         var text = $('<textarea data-time="${i + 9}"></textarea>');
 //Built a loop to add them to html
         if ((i +9) == currentHour) {
@@ -25,7 +27,7 @@ var hourRows = function () {
             text.addClass('future');
         }
 //Assigned classes to change color based on time of day
-        var litSaveBtn = $('<div class="saveBtn" data-time="${i + 9}"><i class=fas fa-save"</i></div>');
+        var litSaveBtn = $('<div class="saveBtn" data-time="${i + 9}"><i class="fas fa-save"></i></div>');
 //The save button icon
 
         rows.append(times);
@@ -54,7 +56,7 @@ var loadData = function () {
             var saveText = localStorage.getItem(i);
             if (saveText) {
                 var textArea = $('textarea[data-time="' + i + '"]');
-                $(textArea).what(saveText);
+                $(textArea).val(saveText);
             }
         }
 
@@ -63,7 +65,7 @@ var loadData = function () {
         displayAlert = $('<div class="alert alert-info">Type tasks in the boxes and click save.</div>')
     }
 $('header').append(displayAlert);
-
+}
 var loadPage = function () {
     today();
     time();
@@ -72,6 +74,7 @@ var loadPage = function () {
     loadData();
     $(".saveBtn").click(saveData);
 }
-}
-$(document).ready("load", loadData());
+
+$(document).ready(loadPage);
+
 
