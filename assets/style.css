@@ -5,45 +5,45 @@ body {
 
   }
   
+
   .timerows {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    width: 80%;
   }
   
   .textarea {
     background: transparent;
-    border: none;
+    border: 250px;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
-    height: 150px;
-
-      }
+         }
   
   .description {
     white-space: pre-wrap;
   }
   
   .time-block {
-    display: flex;
-    justify-content: center;
+      text-align: center;
     border-radius: 15px;
+  
     
   }
   
   .row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+        justify-content: center;
     border-top: 1px solid white;
+    height: 80px;
       }
   
   .hour {
     background-color: #ffffff;
+    width: 50px;
+    text-align: right;
     color: #000000;
-    border-top: 1px dashed #000000;
-    height: 40px;
-    width: 40px;
+    padding-top: 10px;
+    padding-right: 10px;
   }
   
   .past {
@@ -67,8 +67,10 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
     color: white;
-    height: 150px;
-    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
   }
   
   .saveBtn i:hover {
