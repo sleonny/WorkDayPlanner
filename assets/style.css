@@ -6,18 +6,19 @@ body {
   }
   
 
-  .timerows {
+  .timeRows {
     margin-bottom: 50px;
     width: 80%;
   }
   
-  .textarea {
+  textarea {
     background: transparent;
     border: 250px;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    width: 1000px;
          }
   
   .description {
@@ -32,9 +33,10 @@ body {
   }
   
   .row {
-        justify-content: center;
+    justify-content: center;
     border-top: 1px solid white;
     height: 80px;
+    width: 100%;
       }
   
   .hour {
@@ -44,6 +46,7 @@ body {
     color: #000000;
     padding-top: 10px;
     padding-right: 10px;
+    width: 200px;
   }
   
   .past {

@@ -15,7 +15,7 @@ var hourRows = function () {
     var currentHour = dayjs().format('H');
 //Created an array for each time in a workday
     for(var i = 0; i < hours.length; i++) {
-        var rows = $('<div class="row" style="width: 100%;"></div>');
+        var rows = $('<div class="row"></div>');
         var times = $("<div class='hour'>" +  hours[i] + "</div>");
         var text = $('<textarea data-time="${i + 9}"></textarea>');
 //Built a loop to add them to html
